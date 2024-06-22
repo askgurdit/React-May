@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
-import card from './components/card.jsx';
+import Card from './components/Card.jsx';
 
 function App() {
-  
+  const [Count , setCount] = useState(0)
+
+  let myObj = {
+  username : "hitesh",
+  age : 21
+}
+
+  let newArr = [1,2,3]
 
   return (
     <>
       <div className='bg-green-400 text-green-900 h-screen w-full flex justify-center items-center'>
-        <card />
+        <Card username = "Chaiaurcode"  btnText = "Click me"/>
+        <Card username = "hitesh" btnText = "Visit me"/>
       </div>
     </>
   );
