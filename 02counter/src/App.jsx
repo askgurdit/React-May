@@ -5,9 +5,10 @@ function App() {
   const [message, setMessage] = useState('');
 
   const addValue = () => {
-    if (counter >= 0 && counter < 20) {
-      setCounter(counter + 1);
-      const addMessage = `Value added: ${counter + 1}`;
+    if (counter >= 0 && counter <= 16) {
+      // Increment counter by 4
+      setCounter(prevCounter => prevCounter + 4);
+      const addMessage = `Value added: ${counter + 4}`;
       setMessage(addMessage);
       console.log(addMessage);
     } else {
@@ -15,11 +16,11 @@ function App() {
       setMessage(addMessage);
       console.log(addMessage);
     }
-  }
+  };
 
   const removeValue = () => {
     if (counter > 0 && counter <= 20) {
-      setCounter(counter - 1);
+      setCounter(prevCounter => prevCounter - 1);
       const removeMessage = `Value removed: ${counter - 1}`;
       setMessage(removeMessage);
       console.log(removeMessage);
@@ -28,7 +29,7 @@ function App() {
       setMessage(removeMessage);
       console.log(removeMessage);
     }
-  }
+  };
 
   return (
     <>
@@ -48,6 +49,7 @@ function App() {
           >
             Remove Value
           </button>
+          <p className='mt-4'>{message}</p>
         </div>
       </div>
     </>

@@ -4,12 +4,10 @@ import Card from './components/Card.jsx';
 function App() {
   const [Count , setCount] = useState(0)
 
-  let myObj = {
+ /* let myObj = {
   username : "hitesh",
   age : 21
-}
-
-  let newArr = [1,2,3]
+}*/
 
   return (
     <>
