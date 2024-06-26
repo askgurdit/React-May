@@ -1,5 +1,5 @@
 // For from container
-import React from 'react';
+import React , {useId} from 'react';
 
 function InputBox({
     label,
@@ -12,13 +12,15 @@ function InputBox({
     currencyDisable = false,
     className = "",
 }) {
+    const amountInputId = useId()
     return (
         <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
             <div className="w-1/2">
-                <label className="text-black/40 mb-2 inline-block">
+                <label htmlFor={amountInputId} className="text-black/40 mb-2 inline-block">
                     {label}
                 </label>
                 <input
+                    id={amountInputId}
                     className="outline-none w-full bg-transparent py-1.5"
                     type="number"
                     placeholder="Amount"
