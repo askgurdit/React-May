@@ -11,6 +11,7 @@ function App() {
   const currencyInfo = useCurrencyInfo(from);
   const options = Object.keys(currencyInfo);
 
+  // Function to swap 'from' and 'to' currencies
   const swap = () => {
     setFrom(to);
     setTo(from);
@@ -18,6 +19,7 @@ function App() {
     setAmount(convertedAmount);
   };
 
+   // Function to perform currency conversion
   const convert = () => {
     setConvertedAmount(amount * currencyInfo[to]);
   };
@@ -54,6 +56,7 @@ function App() {
                 Swap
               </button>
             </div>
+            {/*InputBox for 'From' currency */}
             <div className="w-full mt-1 mb-4">
               <InputBox
                 label="To"
@@ -64,6 +67,7 @@ function App() {
                 amountDisabled={true}
               />
             </div>
+            { /* Button to swap currencies */}
             <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
               Convert {from.toUpperCase()} to {to.toUpperCase()}
             </button>
@@ -74,4 +78,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
