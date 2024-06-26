@@ -12,7 +12,7 @@ function useCurrencyInfo(currency) {
             .then((res) => res.json())  // Parse the JSON response
             .then((json) => {
                 setData(json[currency]);  // Update state with the fetched currency data
-                console.log(json[currency]);  // Log the fetched data to the console (optional)
+                //console.log(json[currency]);  // Log the fetched data to the console (optional)
             })
             .catch((error) => {
                 console.error('Error fetching currency data:', error);  // Log any errors that occur during fetch
