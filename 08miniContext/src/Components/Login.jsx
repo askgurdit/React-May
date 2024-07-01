@@ -14,18 +14,24 @@ function Login() {
   return (
     <div>
         <h2>Login</h2>
+        <form onSubmit={handleSubmit}>
         <input type='text'
         value={username}
         onChange={(e) => setUsername(e.target.value) }
-        placeholder='username'  />
+        placeholder='username' 
+        required />
+        
         {" "}
         <input type='text' 
         value={password}
         onChange={(e) => setPassword(e.target.value) }
-        placeholder='password'  />
+        placeholder='password'  
+        required/>
         <button onClick={handleSubmit}>Submit</button>
+        </form>
     </div>
   )
 }
+
 
 export default Login
