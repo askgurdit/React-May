@@ -1,9 +1,9 @@
 import React from 'react'
 
-function logo() {
+function Logo() {
   return (
-    <div>logo</div>
+    <div>Logo</div>
   )
 }
 
-export default logo
+export default Logo
